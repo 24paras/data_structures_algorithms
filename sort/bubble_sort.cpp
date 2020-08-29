@@ -30,12 +30,21 @@ int main()
     for(int i=0; i<size; i++)
     {
         for(int j=size-1; j>0; j-- )
+<<<<<<< HEAD
 	{
 		if(arr[j] < arr[j-1])
 		{	
 			swap(arr[j], arr[j-1]);
 		}
 	}
+=======
+    	{
+			if(arr[j] < arr[j-1])
+			{	
+				swap(arr[j], arr[j-1]);
+			}
+		}
+>>>>>>> bf410373fb585a2d9eae951f2411c859db31b504
     
     }
 
