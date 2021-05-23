@@ -34,4 +34,23 @@ int main(){
     getline(cin, s2);
     vector<vector<int> >dp(s1.size()+1, vector<int>(s2.size()+1));
     printf("length of the lcs is %d\n", lcs(s1, s2, s1.size(), s2.size(), dp));
+
+    // printing the longest common subsequence
+    int i=s1.size(), j=s2.size();
+    string res = "";
+    while(i > 0 && j > 0){
+        if(s1[i-1] == s2[j-1]){
+            res += s1[i-1];
+            i--;
+            j--;
+        }
+        else if(dp[i-1][j] > dp[i][j-1]){
+            i--;
+        }
+        else {
+            j--;
+        }
+    }
+    reverse(res.begin(), res.end());
+    printf("The longest common subseq is: %s\n", res.c_str());
 }
