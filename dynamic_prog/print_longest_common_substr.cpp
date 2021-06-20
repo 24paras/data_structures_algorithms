@@ -27,7 +27,7 @@ int lcs(string s1, string s2, int m, int n, vector<vector<int> >&dp, int &row, i
             else {
                 dp[i][j] = 0;
             }
-        }
+             }
     }
 
     return var;
