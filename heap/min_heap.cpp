@@ -72,7 +72,7 @@ int minHeap::extractMin(){
         return arr[heap_size];
     }
 
-    int minH = arr[heap_size-1];
+    int minH = arr[0];
     arr[0] = arr[heap_size-1];
     heap_size--;
     minHeapify(0);
@@ -102,8 +102,6 @@ void minHeap::minHeapify(int ind){
     }
 
 }
-
-
 
 
 int main(){
